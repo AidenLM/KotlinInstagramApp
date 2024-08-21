@@ -1,19 +1,17 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.KotlinInstagram" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Base.Theme.KotlinInstagram" parent="Theme.Material3.Light.NoActionBar">
+        <!-- Tüm uygulama genelinde kullanılacak temalar ve öznitelikler -->
+    </style>
 
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light">
+        <!-- Aydınlık mod için temanız -->
     </style>
 
     <style name="BlackButton" parent="Widget.AppCompat.Button">
         <item name="android:background">@android:color/black</item>
         <item name="android:textColor">@android:color/white</item>
     </style>
-
-
-
-
-
-
 
     <style name="Theme.KotlinInstagram" parent="Base.Theme.KotlinInstagram" />
 </resources>

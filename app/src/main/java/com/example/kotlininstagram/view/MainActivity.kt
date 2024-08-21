@@ -1,22 +1,18 @@
-package com.example.kotlininstagram
+package com.example.kotlininstagram.view
 
 import android.content.Intent
-import androidx.appcompat.widget.Toolbar
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.kotlininstagram.databinding.ActivityFeedBinding
+import com.example.kotlininstagram.R
 import com.example.kotlininstagram.databinding.ActivityMainBinding
-import com.example.kotlininstagram.databinding.ToolbarCustomBinding
 import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.auth
-import com.google.firebase.internal.InternalTokenResult
 
 
 class MainActivity : AppCompatActivity() {
@@ -43,7 +39,7 @@ class MainActivity : AppCompatActivity() {
 
         if(currentUser != null){
 
-            val intent = Intent(this,FeedActivity::class.java)
+            val intent = Intent(this, FeedActivity::class.java)
             startActivity(intent)
             finish()
         }
@@ -82,7 +78,7 @@ class MainActivity : AppCompatActivity() {
         } else{
             auth.createUserWithEmailAndPassword(email,password).addOnSuccessListener {
                 //success
-                val intent = Intent(this@MainActivity,FeedActivity::class.java)
+                val intent = Intent(this@MainActivity, FeedActivity::class.java)
                 startActivity(intent)
                 finish()
             }.addOnFailureListener {
